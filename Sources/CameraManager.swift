@@ -804,6 +804,8 @@ open class CameraManager: NSObject, AVCaptureFileOutputRecordingDelegate, UIGest
         guard captureSession.canAddOutput(output)
             else { return }
         
+        qrOutput = output
+        
         qrCodeDetectionHandler = handler
         captureSession.addOutput(output)
         
